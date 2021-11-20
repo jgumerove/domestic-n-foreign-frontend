@@ -7,6 +7,7 @@ import L from 'leaflet';
 //source: https://github.com/PaulLeCam/react-leaflet/issues/453
 let DefaultIcon = L.icon({
   iconUrl: icon,
+  iconAnchor: [10, 41],
   shadowUrl: iconShadow
 });
 
@@ -15,7 +16,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 class WorldMapContainer extends Component {
     render() {
         const position = [51.505, -0.09]
-        const data = [{
+        const test = [{
             lat: 51.505,
             long: -0.09,
             location: "London"
@@ -30,13 +31,18 @@ class WorldMapContainer extends Component {
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {data.map((p) =>{
+      {test.map((p) =>{
          return (<Marker position={[p.lat, p.long]} >
               <Popup>
                   <span>{p.location}</span>
               </Popup>
           </Marker>)
       })}
+      {/* <Marker position={position}>
+        <Popup>
+           <span>Look at the Popup</span>
+        </Popup>
+      </Marker> */}
     </MapContainer>
         )
     }
