@@ -7,8 +7,9 @@ import L from 'leaflet';
 //source: https://github.com/PaulLeCam/react-leaflet/issues/453
 let DefaultIcon = L.icon({
   iconUrl: icon,
-  iconAnchor: [10, 41],
-  shadowUrl: iconShadow
+  iconSize: [20, 30], //to make icon size smaller
+  iconAnchor: [10, 41] //to fix position on zoom-out
+  //shadowUrl: iconShadow
 });
 
 L.Marker.prototype.options.icon = DefaultIcon;
