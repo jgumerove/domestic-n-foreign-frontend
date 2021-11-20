@@ -15,17 +15,28 @@ L.Marker.prototype.options.icon = DefaultIcon;
 class WorldMapContainer extends Component {
     render() {
         const position = [51.505, -0.09]
+        const data = [{
+            lat: 51.505,
+            long: -0.09,
+            location: "London"
+        }, {
+            lat: 55.7558,
+            long: 37.6173,
+            location: "Moscow"
+        }]
         return (
       <MapContainer center={position} zoom={3} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={position}>
-        <Popup>
-           <span>Look at the Popup</span>
-        </Popup>
-      </Marker>
+      {data.map((p) =>{
+         return (<Marker position={[p.lat, p.long]} >
+              <Popup>
+                  <span>{p.location}</span>
+              </Popup>
+          </Marker>)
+      })}
     </MapContainer>
         )
     }
