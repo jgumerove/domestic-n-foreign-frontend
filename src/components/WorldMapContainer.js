@@ -38,7 +38,7 @@ class WorldMapContainer extends Component {
           noWrap={true} //to fix continent reptition
       />
         {test.map((p) =>{
-           return (<Marker position={[p.lat, p.long]} >
+           return (<Marker position={[p.lat, p.long]} key={p.location} >
                       <Popup>
                        <span>{p.location}</span>
                      </Popup>
