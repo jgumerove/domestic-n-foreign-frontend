@@ -15,6 +15,7 @@ class App extends Component {
     // fetch('http://localhost:3000/countries')
     //   .then(response => response.json())
     //   .then(data => console.log(data));
+     this.props.fetchCountries()
   }
 
   

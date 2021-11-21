@@ -1,9 +1,8 @@
-const api = "http://localhost:3000"
 
 export const fetchCountries = () => {
-    return dispatch => fetch(api + "/countries")
+    return dispatch => fetch("http://localhost:3000/countries")
     .then(res => res.json())
-    .then(restaurants => dispatch({type: "FETCH_COUNTRIES", payload: countries})
+    .then(countries => dispatch({type: "FETCH_COUNTRIES", payload: countries})
     )
 }
 
