@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -16,6 +18,13 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 
 class WorldMapContainer extends Component {
+
+  componentDidMount() {
+    // fetch('http://localhost:3000/countries')
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
+     this.props.fetchCountries()
+  }
     render() {
 
         const position = [51.505, -0.09]
@@ -29,6 +38,7 @@ class WorldMapContainer extends Component {
             long: 37.6173,
             location: "Moscow"
         }]
+        
 
     return (
       <MapContainer center={position} zoom={2} scrollWheelZoom={false}>
@@ -49,4 +59,4 @@ class WorldMapContainer extends Component {
     }
 }
 
-export default WorldMapContainer
+export default connect(null, { fetchCountries })(WorldMapContainer)
