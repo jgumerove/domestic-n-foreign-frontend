@@ -27,19 +27,9 @@ class WorldMapContainer extends Component {
   }
     render() {
 
-        const position = [51.505, -0.09]
-
-        const test = [{
-            lat: 51.505,
-            long: -0.09,
-            location: "London"
-        }, {
-            lat: 55.7558,
-            long: 37.6173,
-            location: "Moscow"
-        }]
+    const position = [51.505, -0.09]
         
-
+    console.log(this.props.countries)
     return (
       <MapContainer center={position} zoom={2} scrollWheelZoom={false}>
         <TileLayer
@@ -47,10 +37,10 @@ class WorldMapContainer extends Component {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           noWrap={true} //to fix continent reptition
       />
-        {test.map((p) =>{
-           return (<Marker position={[p.lat, p.long]} key={p.location} >
+        {this.props.countries.map((country) =>{
+           return (<Marker position={[country.long, country.lat]} key={country.id} >
                       <Popup>
-                       <span>{p.location}</span>
+                       <span>{country.name}</span>
                      </Popup>
                  </Marker>)
                   })}
@@ -59,4 +49,8 @@ class WorldMapContainer extends Component {
     }
 }
 
-export default connect(null, { fetchCountries })(WorldMapContainer)
+const mapStateToProps = (state) => {
+  return {countries: state.countries}
+}
+
+export default connect(mapStateToProps, { fetchCountries })(WorldMapContainer)
