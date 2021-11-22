@@ -9,7 +9,9 @@ class App extends Component {
     render() {
       return (
       <div>
-        <CountriesIndex />
+        <Switch>
+           <Route path="/countries"><CountriesIndex /></Route>
+        </Switch>
       </div>
       )
   }
