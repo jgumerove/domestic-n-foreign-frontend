@@ -4,7 +4,6 @@ import CountryCard from './CountryCard'
 
 class CountryContainer extends Component {
     render() {
-        //console.log(this.props.countries)
         return (
             <div>
                 {this.props.countries.map((country) => {

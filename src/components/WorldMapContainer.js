@@ -28,7 +28,6 @@ class WorldMapContainer extends Component {
   }
     render() {
     return (
-      <>
       <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -43,8 +42,6 @@ class WorldMapContainer extends Component {
                  </Marker>)
                   })}
     </MapContainer>
-    {/* <CountryContainer countries={this.props.countries} /> */}
-    </>
         )
     }
 }
