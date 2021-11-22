@@ -7,8 +7,6 @@ import L from 'leaflet';
 //import icon from 'leaflet/dist/images/marker-icon.png';
 //import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-
-
 //source: https://github.com/PaulLeCam/react-leaflet/issues/453
 let DefaultIcon = L.icon({
   iconUrl: nutcracker,
@@ -18,7 +16,6 @@ let DefaultIcon = L.icon({
 });
 
 L.Marker.prototype.options.icon = DefaultIcon;
-
 
 class WorldMapContainer extends Component {
 
