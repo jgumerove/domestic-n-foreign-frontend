@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
-import CountryCard from './CountryCard'
+import { connect } from 'react-redux'
 
-export class CountryContainer extends Component {
+class CountryContainer extends Component {
     render() {
+        console.log(this.props.countries)
         return (
-                <CountryCard />
+            <div>
+                
+            </div>
         )
     }
 }
 
-export default CountryContainer
+const mapStateToProps = (state) => {
+    return {countries: state.countries}
+  }
+
+export default connect(mapStateToProps)(CountryContainer)

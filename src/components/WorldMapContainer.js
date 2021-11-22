@@ -4,7 +4,7 @@ import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
-import CountryContainer from './CountryContainer';
+//import CountryContainer from './CountryContainer';
 //import icon from 'leaflet/dist/images/marker-icon.png';
 //import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
@@ -43,9 +43,7 @@ class WorldMapContainer extends Component {
                  </Marker>)
                   })}
     </MapContainer>
-    <CountryContainer>
-      
-    </CountryContainer>
+    {/* <CountryContainer countries={this.props.countries} /> */}
     </>
         )
     }
