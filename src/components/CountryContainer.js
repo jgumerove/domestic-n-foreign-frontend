@@ -4,7 +4,7 @@ export class CountryContainer extends Component {
     render() {
         return (
             <div>
-                <h1>Countries Go Here</h1>
+                <h1>Country cards go here</h1>
             </div>
         )
     }
