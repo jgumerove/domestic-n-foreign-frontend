@@ -5,7 +5,7 @@ class CountryCard extends Component {
         console.log(this.props)
         return (
             <div>
-                Individual country card
+                 Test
             </div>
         )
     }

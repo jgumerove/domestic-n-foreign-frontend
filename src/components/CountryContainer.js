@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import CountryCard from './CountryCard'
 
 class CountryContainer extends Component {
     render() {
-        console.log(this.props.countries)
+        //console.log(this.props.countries)
         return (
             <div>
-                
+                {this.props.countries.map((country) => {
+                    return(
+                        <CountryCard {...country} key={country.id} />
+                    )
+                })}
             </div>
         )
     }
