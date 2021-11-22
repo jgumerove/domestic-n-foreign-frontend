@@ -43,7 +43,9 @@ class WorldMapContainer extends Component {
                  </Marker>)
                   })}
     </MapContainer>
-    <CountryContainer />
+    <CountryContainer>
+      
+    </CountryContainer>
     </>
         )
     }

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import CountryCard from './CountryCard'
 
 export class CountryContainer extends Component {
     render() {
         return (
-            <div>
-                <h1>Country cards go here</h1>
-            </div>
+                <CountryCard />
         )
     }
 }
