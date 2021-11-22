@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//will delete the below
 import './App.css';
 import "leaflet/dist/leaflet.css";
 import WorldMapContainer from './WorldMapContainer';
