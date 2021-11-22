@@ -13,6 +13,7 @@ class App extends Component {
         <Switch>
            <Route path="/countries/:id"><CountryShow /></Route>
            <Route path="/countries"><CountriesIndex /></Route>
+           <Route exact path="/"><CountriesIndex/></Route>
         </Switch>
       </div>
       )
