@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-//import icon from 'leaflet/dist/images/marker-icon.png';
-//import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
+import CountryContainer from './CountryContainer';
+//import icon from 'leaflet/dist/images/marker-icon.png';
+//import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+
 
 //source: https://github.com/PaulLeCam/react-leaflet/issues/453
 let DefaultIcon = L.icon({
@@ -25,6 +28,7 @@ class WorldMapContainer extends Component {
   }
     render() {
     return (
+      <>
       <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -39,6 +43,8 @@ class WorldMapContainer extends Component {
                  </Marker>)
                   })}
     </MapContainer>
+    <CountryContainer />
+    </>
         )
     }
 }
