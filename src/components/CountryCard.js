@@ -5,7 +5,10 @@ class CountryCard extends Component {
         console.log(this.props)
         const {name, flag} = this.props
         return (
-            <div>
+            <div className="country-card">
+                <div>
+                <img src={flag} alt={name} />
+                </div>
                  <span>{name}</span>
             </div>
         )
