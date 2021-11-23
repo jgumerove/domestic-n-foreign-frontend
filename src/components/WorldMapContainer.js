@@ -4,6 +4,8 @@ import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
+import { Link } from 'react-router-dom'
+
 //import icon from 'leaflet/dist/images/marker-icon.png';
 //import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
@@ -33,7 +35,7 @@ class WorldMapContainer extends Component {
         {this.props.countries.map((country) =>{
            return (<Marker position={[country.long, country.lat]} key={country.id} >
                       <Popup>
-                       <span>{country.name}</span>
+                      <Link to={`/countries/${country.id}`}><span>{country.name}</span></Link>
                      </Popup>
                  </Marker>)
                   })}
