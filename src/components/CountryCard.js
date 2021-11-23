@@ -9,7 +9,7 @@ class CountryCard extends Component {
                 <div>
                 <Link to={`/countries/${id}`}><img src={flag} alt={name} /></Link>
                 </div>
-                 <span>{name}</span>
+                 <Link to={`/countries/${id}`}><span>{name}</span></Link>
             </div>
         )
     }
