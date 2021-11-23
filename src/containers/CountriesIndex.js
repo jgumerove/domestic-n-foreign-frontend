@@ -6,7 +6,9 @@ class CountriesIndex extends Component {
     render() {
         return (
             <div>
+                <h1>🎄🎄🎄Welcome to Domestic and Foreign🎄🎄🎄</h1>
                 <WorldMapContainer />
+                <br></br>
                 <CountryContainer />
             </div>
         )

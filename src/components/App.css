@@ -1,5 +1,4 @@
 .leaflet-container{
-
     width: 50vw;
     height: 50vh;
     display: block;
@@ -13,18 +12,20 @@
 
   h1 {
     font-family: Arial, Helvetica, sans-serif;
+    color: #0f8A5F;
+    text-align: center
   }
 
   .country-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px; /* 5px rounded corners */
-    width: 320px;
+    width: 365px;
     padding: 20px;
     border: 1px solid #c9c9c9;
     color: black;
     display: inline-block;
     text-align:center;
-    background-color: #00B32C;
+    background-color: #0f8A5F;
 }
 
 img {
