@@ -7,7 +7,7 @@ class CountryCard extends Component {
         return (
             <div className="country-card">
                 <div>
-                <img src={flag} alt={name} />
+                <Link to={`/countries/${id}`}><img src={flag} alt={name} /></Link>
                 </div>
                  <span>{name}</span>
             </div>
