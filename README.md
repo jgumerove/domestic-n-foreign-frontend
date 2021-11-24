@@ -1,2 +1,2 @@
-#About Military Mistletoe
+# About Military Mistletoe
 Military Mistletoe is a Christmas themed interactive map application that lists all the foreign military bases countries have around the world. Every nutcracker on the homepage map represents a country that has foreign military bases. Click on the nutcracker to be directed to the country page which then shows all the of the selected country's military bases on an interactive map around the globe.
