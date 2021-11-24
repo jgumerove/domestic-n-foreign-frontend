@@ -3,12 +3,9 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { fetchCountry } from '../actions/fetchCountry';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import L from 'leaflet';
 import CountryHeader from '../components/CountryHeader';
 import {nutcrackerIcon} from '../Static/iconData.js'
 
-
-L.Marker.prototype.options.icon = nutcrackerIcon();
 
 class CountryMapContainer extends Component {
     componentDidMount() {
@@ -29,7 +26,7 @@ class CountryMapContainer extends Component {
                      />
                     {selectedCountry.places.map(({baseLong, baseLat, id, location, baseType})=> {
                         return (
-                        <Marker position={[baseLong, baseLat]} key={id}>
+                        <Marker icon={nutcrackerIcon()}position={[baseLong, baseLat]} key={id}>
                             <Popup>
                                 <span>Location: {location}</span><br/>
                                 <span>Base-type: {baseType}</span>

@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import L from 'leaflet';
 import { Link } from 'react-router-dom'
 import {nutcrackerIcon} from '../Static/iconData.js'
-
-L.Marker.prototype.options.icon = nutcrackerIcon();
 
 class WorldMapContainer extends Component {
 
@@ -23,7 +20,7 @@ class WorldMapContainer extends Component {
           noWrap={true} //to fix continent reptition
       />
         {countries.map(({long, lat, id, name}) =>{
-           return (<Marker position={[long, lat]} key={id} >
+           return (<Marker icon={nutcrackerIcon()}position={[long, lat]} key={id} >
                       <Popup>
                       <Link to={`/countries/${id}`}><span>{name}</span></Link>
                      </Popup>
