@@ -25,6 +25,7 @@ class WorldMapContainer extends Component {
      this.props.fetchCountries()
   }
     render() {
+    const { countries } = this.props
     return (
       <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false}>
         <TileLayer
@@ -32,7 +33,7 @@ class WorldMapContainer extends Component {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           noWrap={true} //to fix continent reptition
       />
-        {this.props.countries.map(({long, lat, id, name}) =>{
+        {countries.map(({long, lat, id, name}) =>{
            return (<Marker position={[long, lat]} key={id} >
                       <Popup>
                       <Link to={`/countries/${id}`}><span>{name}</span></Link>
