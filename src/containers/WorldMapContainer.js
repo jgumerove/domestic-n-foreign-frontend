@@ -2,22 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
 import { Link } from 'react-router-dom'
+import {nutcrackerIcon} from '../Static/iconData.js'
 
-//import icon from 'leaflet/dist/images/marker-icon.png';
-//import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-
-//source: https://github.com/PaulLeCam/react-leaflet/issues/453
-let DefaultIcon = L.icon({
-  iconUrl: nutcracker,
-  iconSize: [20, 45], //to make icon size smaller
-  iconAnchor: [10, 41] //to fix position on zoom-out
-  //shadowUrl: iconShadow
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
+L.Marker.prototype.options.icon = nutcrackerIcon();
 
 class WorldMapContainer extends Component {
 

@@ -3,17 +3,12 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { fetchCountry } from '../actions/fetchCountry';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
 import CountryHeader from '../components/CountryHeader';
+import {nutcrackerIcon} from '../Static/iconData.js'
 
-let DefaultIcon = L.icon({
-    iconUrl: nutcracker,
-    iconSize: [20, 45], //to make icon size smaller
-    iconAnchor: [10, 41] //to fix position on zoom-out
-  });
 
- L.Marker.prototype.options.icon = DefaultIcon;
+L.Marker.prototype.options.icon = nutcrackerIcon();
 
 class CountryMapContainer extends Component {
     componentDidMount() {
@@ -22,7 +17,6 @@ class CountryMapContainer extends Component {
      }
 
      render() {
-         console.log(this.props)
          const { selectedCountry } = this.props
         return (
             <div>

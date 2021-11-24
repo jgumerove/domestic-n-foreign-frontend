@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function About() {
     return (
         <div>
-            About Us<br/>
+            <h2>About Us</h2><br/>
             <h3><Link to="/countries">Go Back</Link></h3>
         </div>
     )
