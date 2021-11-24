@@ -37,8 +37,7 @@ class CountryMapContainer extends Component {
                         A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>
                     </Marker>
-                </MapContainer>
-                <br></br>    
+                </MapContainer><br/>
                 <Link to="/countries">Go back</Link>
             </div>
         )
