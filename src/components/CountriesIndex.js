@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CountryContainer from '../containers/CountryContainer'
 import Greeting from './Greeting'
 import WorldMapContainer from '../containers/WorldMapContainer'
-import { Link } from 'react-router-dom'
+import AboutLink from './AboutLink'
 
 
 class CountriesIndex extends Component {
@@ -12,7 +12,7 @@ class CountriesIndex extends Component {
                 <Greeting />
                 <WorldMapContainer /><br/>
                 <CountryContainer />
-                <Link to="/about"><h3>About Us</h3></Link>  
+                <AboutLink />
             </div>
         )
     }

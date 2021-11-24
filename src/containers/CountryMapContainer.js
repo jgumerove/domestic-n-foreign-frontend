@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { fetchCountry } from '../actions/fetchCountry';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import CountryHeader from '../components/CountryHeader';
 import nutcracker from '../Static/nutcracker.png'
 import L from "leaflet"
+import BackLink from '../components/BackLink';
+import AboutLink from '../components/AboutLink';
 
 
 class CountryMapContainer extends Component {
@@ -44,7 +45,8 @@ class CountryMapContainer extends Component {
                         )
                     })}
                 </MapContainer><br/>
-                <h3><Link to="/countries">Go Back</Link></h3>
+                <BackLink />
+                <AboutLink />
             </div>
         )
     }
