@@ -11,6 +11,7 @@ class WorldMapContainer extends Component {
      this.props.fetchCountries()
   }
     render() {
+    console.log(this.props)
     const { countries } = this.props
     return (
       <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false}>

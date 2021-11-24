@@ -13,7 +13,7 @@ export const countriesReducer = (state = initialState, action) => {
             return {...state, countries: action.payload};
         case "FETCH_COUNTRY":
             console.log("working", action.payload)
-            return {...state, selectedCountry: action.payload}
+            return {...state, selectedCountry: action.payload};
         default:
             return state
     }
