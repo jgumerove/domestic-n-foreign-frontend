@@ -1,12 +1,13 @@
 
-
-export const countriesReducer = (state = {
+const initialState = {
     countries: [],
     selectedCountry: {
         name: "",
         places: []
-    }
-}, action) => {
+     }
+  }
+
+export const countriesReducer = (state = initialState, action) => {
     switch(action.type){
         case "FETCH_COUNTRIES":
             return {...state, countries: action.payload};
