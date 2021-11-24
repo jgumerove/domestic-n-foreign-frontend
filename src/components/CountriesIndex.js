@@ -12,7 +12,7 @@ class CountriesIndex extends Component {
                 <Greeting />
                 <WorldMapContainer /><br/>
                 <CountryContainer />
-                <div><Link to="/about"><h3>About Us</h3></Link></div>  
+                <Link to="/about"><h3>About Us</h3></Link>  
             </div>
         )
     }

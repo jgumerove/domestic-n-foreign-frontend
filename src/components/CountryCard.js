@@ -8,7 +8,7 @@ class CountryCard extends Component {
             <div className="country-card">
                  <h5>Bases: {baseCount}</h5>
                  <div><Link to={`/countries/${id}`}><img src={flag} alt={name} /></Link></div>
-                 <div><Link to={`/countries/${id}`}><span>{name}</span></Link></div>  
+                 <Link to={`/countries/${id}`}><span>{name}</span></Link>  
             </div>
         )
     }
