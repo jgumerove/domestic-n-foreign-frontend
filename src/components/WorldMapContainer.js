@@ -32,10 +32,10 @@ class WorldMapContainer extends Component {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           noWrap={true} //to fix continent reptition
       />
-        {this.props.countries.map((country) =>{
-           return (<Marker position={[country.long, country.lat]} key={country.id} >
+        {this.props.countries.map(({long, lat, id, name}) =>{
+           return (<Marker position={[long, lat]} key={id} >
                       <Popup>
-                      <Link to={`/countries/${country.id}`}><span>{country.name}</span></Link>
+                      <Link to={`/countries/${id}`}><span>{name}</span></Link>
                      </Popup>
                  </Marker>)
                   })}
