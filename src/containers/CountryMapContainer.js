@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import { fetchCountry } from '../actions/fetchCountry';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import CountryHeader from '../components/CountryHeader';
-import {nutcrackerIcon} from '../Static/iconData.js'
+import nutcracker from '../Static/nutcracker.png'
+import L from "leaflet"
 
 
 class CountryMapContainer extends Component {
@@ -12,6 +13,14 @@ class CountryMapContainer extends Component {
         const routeId = this.props.routeId
         this.props.fetchCountry(routeId)
      }
+
+     defaultIcon(){
+         return L.icon({
+            iconUrl: nutcracker,
+            iconSize: [20, 45], //to make icon size smaller
+            iconAnchor: [10, 41] //to fix position on zoom-out
+          }
+          )}
 
      render() {
          const { selectedCountry } = this.props
@@ -26,7 +35,7 @@ class CountryMapContainer extends Component {
                      />
                     {selectedCountry.places.map(({baseLong, baseLat, id, location, baseType})=> {
                         return (
-                        <Marker icon={nutcrackerIcon()}position={[baseLong, baseLat]} key={id}>
+                        <Marker icon={this.defaultIcon()}position={[baseLong, baseLat]} key={id}>
                             <Popup>
                                 <span>Location: {location}</span><br/>
                                 <span>Base-type: {baseType}</span>

@@ -3,15 +3,24 @@ import { connect } from 'react-redux'
 import { fetchCountries } from '../actions/fetchCountries';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { Link } from 'react-router-dom'
-import {nutcrackerIcon} from '../Static/iconData.js'
+import nutcracker from '../Static/nutcracker.png'
+import L from "leaflet"
 
 class WorldMapContainer extends Component {
 
   componentDidMount() {
      this.props.fetchCountries()
   }
+
+  defaultIcon(){
+    return L.icon({
+       iconUrl: nutcracker,
+       iconSize: [20, 45], //to make icon size smaller
+       iconAnchor: [10, 41] //to fix position on zoom-out
+       }
+     )}
+
     render() {
-    console.log(this.props)
     const { countries } = this.props
     return (
       <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false}>
@@ -21,7 +30,7 @@ class WorldMapContainer extends Component {
           noWrap={true} //to fix continent reptition
       />
         {countries.map(({long, lat, id, name}) =>{
-           return (<Marker icon={nutcrackerIcon()}position={[long, lat]} key={id} >
+           return (<Marker icon={this.defaultIcon()}position={[long, lat]} key={id} >
                       <Popup>
                       <Link to={`/countries/${id}`}><span>{name}</span></Link>
                      </Popup>
