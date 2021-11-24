@@ -3,6 +3,7 @@ import './App.css';
 import "leaflet/dist/leaflet.css";
 import CountriesIndex from '../containers/CountriesIndex';
 import CountryShow from '../containers/CountryShow';
+import About from './About';
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <Switch>
            <Route path="/countries/:id" component={CountryShow}/>
            <Route path="/countries"><CountriesIndex /></Route>
+           <Route path="/about"><About /></Route>
            <Route exact path="/"><CountriesIndex/></Route>
         </Switch>
       </div>
