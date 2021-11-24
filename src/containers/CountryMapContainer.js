@@ -5,7 +5,7 @@ import { fetchCountry } from '../actions/fetchCountry';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
-import CountryHeader from './CountryHeader';
+import CountryHeader from '../components/CountryHeader';
 
 let DefaultIcon = L.icon({
     iconUrl: nutcracker,

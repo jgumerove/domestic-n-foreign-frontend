@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CountryMapContainer from '../components/CountryMapContainer'
+import CountryMapContainer from './CountryMapContainer'
 
 
 class CountryShow extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import CountryContainer from '../components/CountryContainer'
+import CountryContainer from './CountryContainer'
 import Greeting from '../components/Greeting'
-import WorldMapContainer from '../components/WorldMapContainer'
+import WorldMapContainer from './WorldMapContainer'
 
 class CountriesIndex extends Component {
     render() {

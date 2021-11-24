@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import CountryCard from './CountryCard'
+import CountryCard from '../components/CountryCard'
 
 class CountryContainer extends Component {
     render() {
