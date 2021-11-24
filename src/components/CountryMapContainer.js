@@ -5,6 +5,7 @@ import { fetchCountry } from '../actions/fetchCountry';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import nutcracker from '../Static/nutcracker.png'
 import L from 'leaflet';
+import CountryHeader from './CountryHeader';
 
 let DefaultIcon = L.icon({
     iconUrl: nutcracker,
@@ -25,6 +26,7 @@ class CountryMapContainer extends Component {
          const { selectedCountry } = this.props
         return (
             <div>
+               <CountryHeader name={selectedCountry.name} />
                <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={false}>
                     <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -35,7 +37,7 @@ class CountryMapContainer extends Component {
                         return (
                         <Marker position={[baseLong, baseLat]} key={id}>
                             <Popup>
-                                <span>{location}</span>
+                                <span>{location}</span><br/>
                             </Popup>    
                         </Marker>
                         )
