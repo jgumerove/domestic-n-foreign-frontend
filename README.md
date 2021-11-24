@@ -13,5 +13,5 @@ The following frameworks/libraries were used to create Military Mistletoe:
 ## Getting Started
 Since Ruby on Rails was used as an API for Military Mistletoe - the Rails server must be run simultaneously with React. Please make sure to have both repositories cloned (Back-end repo provided below) and run the following commands:
 
-**$rails s
-**$npm start
+** $rails s
+** $npm start
