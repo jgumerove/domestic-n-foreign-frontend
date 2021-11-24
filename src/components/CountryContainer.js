@@ -4,9 +4,10 @@ import CountryCard from './CountryCard'
 
 class CountryContainer extends Component {
     render() {
+        const { countries } = this.props
         return (
             <div className="country-container">
-                {this.props.countries.map((country) => {
+                {countries.map((country) => {
                     return(
                         <CountryCard {...country} key={country.id} />
                     )

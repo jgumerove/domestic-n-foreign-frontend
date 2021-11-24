@@ -6,14 +6,16 @@ import { fetchCountry } from '../actions/fetchCountry';
 
 class CountryMapContainer extends Component {
     componentDidMount() {
-        const routeId = this.props.match.params.id
+        const routeId = this.props.routeId
         this.props.fetchCountry(routeId)
      }
 
      render() {
+         console.log(this.props)
+         const { selectedCountry } = this.props
         return (
             <div>
-                Map here 
+                Map here {selectedCountry.name}
                 <br></br>    
                 <Link to="/countries">Go back</Link>
             </div>

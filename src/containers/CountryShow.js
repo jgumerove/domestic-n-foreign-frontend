@@ -6,7 +6,7 @@ class CountryShow extends Component {
     render() {
         return (
             <div>
-                <CountryMapContainer />
+                <CountryMapContainer routeId={this.props.match.params.id}/>
             </div>
         )
     }
