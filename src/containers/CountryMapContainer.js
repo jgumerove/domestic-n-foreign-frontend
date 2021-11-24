@@ -44,7 +44,7 @@ class CountryMapContainer extends Component {
                         )
                     })}
                 </MapContainer><br/>
-                <Link to="/countries">Go back</Link>
+                <h3><Link to="/countries">Go Back</Link></h3>
             </div>
         )
     }
