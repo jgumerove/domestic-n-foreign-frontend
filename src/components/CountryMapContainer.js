@@ -31,11 +31,11 @@ class CountryMapContainer extends Component {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     noWrap={true}
                      />
-                    {selectedCountry.places.map((base)=> {
+                    {selectedCountry.places.map(({baseLong, baseLat, id, location})=> {
                         return (
-                        <Marker position={[base.baseLong, base.baseLat]} key={base.id}>
+                        <Marker position={[baseLong, baseLat]} key={id}>
                             <Popup>
-                                <span>{base.location}</span>
+                                <span>{location}</span>
                             </Popup>    
                         </Marker>
                         )
