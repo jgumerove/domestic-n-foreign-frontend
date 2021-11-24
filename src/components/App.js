@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
 import "leaflet/dist/leaflet.css";
-import CountriesIndex from '../containers/CountriesIndex';
-import CountryShow from '../containers/CountryShow';
+import CountriesIndex from './CountriesIndex';
+import CountryShow from './CountryShow';
 import About from './About';
 import { Switch, Route } from 'react-router-dom'
 
