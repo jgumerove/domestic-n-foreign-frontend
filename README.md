@@ -16,7 +16,7 @@ Since Ruby on Rails was used as an API for Military Mistletoe - the Rails server
 1. **$rails s**
 2. **$npm start**
 
-### INSTALLATION
+## INSTALLATION
 Please follow the below steps to install this application:
 1. clone the repo:
    git clone https://github.com/jgumerove/domestic-n-foreign-frontend.git
@@ -25,12 +25,12 @@ Please follow the below steps to install this application:
    git clone https://github.com/jgumerove/domestic-n-foreign-backend.git
 4. **bundle install**
 
-### RAILS API
+## RAILS API
 The following repository must be used in conjuction with this front-end repository in order to use the application:
 [(https://github.com/jgumerove/domestic-n-foreign-backend.git)]
 
-### CONTRIBUTOR GUIDE
+## CONTRIBUTOR GUIDE
 Bug reports and questions are welcomed at the following [(https://github.com/jgumerove)]
 
-### LICENSE
+## LICENSE
 Licensed under the [MIT License](LICENSE).
